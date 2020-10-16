@@ -34,6 +34,13 @@ resource "cloudflare_record" "freenas" {
   type    = "A"
 }
 
+resource "cloudflare_record" "sora" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "sora"
+  value   = "192.168.23.50"
+  type    = "A"
+}
+
 # FreeNAS Jails
 resource "cloudflare_record" "mirrors" {
   zone_id = local.rmb938-me-zone-id
