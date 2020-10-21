@@ -37,7 +37,28 @@ resource "cloudflare_record" "freenas" {
 resource "cloudflare_record" "sora" {
   zone_id = local.rmb938-me-zone-id
   name    = "sora"
+  value   = "192.168.20.50"
+  type    = "A"
+}
+
+resource "cloudflare_record" "sora-vms" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "sora-vms"
   value   = "192.168.23.50"
+  type    = "A"
+}
+
+resource "cloudflare_record" "riku" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "riku"
+  value   = "192.168.20.51"
+  type    = "A"
+}
+
+resource "cloudflare_record" "riku-vms" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "riku-vms"
+  value   = "192.168.23.51"
   type    = "A"
 }
 
