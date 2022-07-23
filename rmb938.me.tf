@@ -37,13 +37,6 @@ resource "cloudflare_record" "freenas" {
 resource "cloudflare_record" "sora" {
   zone_id = local.rmb938-me-zone-id
   name    = "sora"
-  value   = "192.168.20.50"
-  type    = "A"
-}
-
-resource "cloudflare_record" "sora-vms" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "sora-vms"
   value   = "192.168.23.50"
   type    = "A"
 }
@@ -51,13 +44,6 @@ resource "cloudflare_record" "sora-vms" {
 resource "cloudflare_record" "riku" {
   zone_id = local.rmb938-me-zone-id
   name    = "riku"
-  value   = "192.168.20.51"
-  type    = "A"
-}
-
-resource "cloudflare_record" "riku-vms" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "riku-vms"
   value   = "192.168.23.51"
   type    = "A"
 }
@@ -105,22 +91,6 @@ resource "cloudflare_record" "pi3" {
   value   = "192.168.23.72"
   type    = "A"
 }
-
-# Kubernetes
-resource "cloudflare_record" "kube0-api" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "kube0.kubernetes"
-  value   = "192.168.23.60"
-  type    = "A"
-}
-
-resource "cloudflare_record" "kube0-ingress" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "*.kube0.kubernetes"
-  value   = cloudflare_record.kube0-api.hostname
-  type    = "CNAME"
-}
-
 
 # Mailgun
 resource "cloudflare_record" "email-mail" {
