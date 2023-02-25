@@ -49,16 +49,16 @@ resource "cloudflare_record" "riku" {
 }
 
 # FreeNAS Jails
-resource "cloudflare_record" "mirrors" {
+resource "cloudflare_record" "hashi-vault" {
   zone_id = local.rmb938-me-zone-id
-  name    = "mirrors"
+  name    = "hashi-vault"
   value   = "192.168.23.41"
   type    = "A"
 }
 
-resource "cloudflare_record" "networkboot" {
+resource "cloudflare_record" "grafana" {
   zone_id = local.rmb938-me-zone-id
-  name    = "networkboot"
+  name    = "grafana"
   value   = "192.168.23.42"
   type    = "A"
 }
