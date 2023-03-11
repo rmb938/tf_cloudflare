@@ -70,6 +70,13 @@ resource "cloudflare_record" "plex" {
   type    = "A"
 }
 
+resource "cloudflare_record" "openstack-mysql" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "openstack-mysql"
+  value   = "192.168.23.44"
+  type    = "A"
+}
+
 # Raspberry PIs
 resource "cloudflare_record" "pi1" {
   zone_id = local.rmb938-me-zone-id
