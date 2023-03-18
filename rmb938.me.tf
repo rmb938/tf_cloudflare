@@ -70,10 +70,46 @@ resource "cloudflare_record" "plex" {
   type    = "A"
 }
 
+# FreeNAS Openstack Jails
 resource "cloudflare_record" "openstack-mysql" {
   zone_id = local.rmb938-me-zone-id
   name    = "openstack-mysql"
-  value   = "192.168.23.44"
+  value   = "192.168.23.20"
+  type    = "A"
+}
+
+resource "cloudflare_record" "openstack-rabbitmq" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "openstack-rabbitmq"
+  value   = "192.168.23.21"
+  type    = "A"
+}
+
+resource "cloudflare_record" "openstack-keystone" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "openstack-keystone"
+  value   = "192.168.23.22"
+  type    = "A"
+}
+
+resource "cloudflare_record" "openstack-glance" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "openstack-glance"
+  value   = "192.168.23.23"
+  type    = "A"
+}
+
+resource "cloudflare_record" "openstack-cinder" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "openstack-cinder"
+  value   = "192.168.23.24"
+  type    = "A"
+}
+
+resource "cloudflare_record" "openstack-nova" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "openstack-nova"
+  value   = "192.168.23.25"
   type    = "A"
 }
 
