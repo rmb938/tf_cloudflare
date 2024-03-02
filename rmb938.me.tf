@@ -180,3 +180,25 @@ resource "cloudflare_record" "google-site-verification" {
   value   = "google-site-verification=PEprjAa7x8NQlsVotFJnXc2i8C_jLFiD9MyPp2K1Lts"
   type    = "TXT"
 }
+
+# Digital Ocean
+resource "cloudflare_record" "do-ns1" {
+  zone_id  = local.rmb938-me-zone-id
+  name = "do"
+  value = "ns1.digitalocean.com."
+  type = "NS"
+}
+
+resource "cloudflare_record" "do-ns2" {
+  zone_id  = local.rmb938-me-zone-id
+  name = "do"
+  value = "ns2.digitalocean.com."
+  type = "NS"
+}
+
+resource "cloudflare_record" "do-ns3" {
+  zone_id  = local.rmb938-me-zone-id
+  name = "do"
+  value = "ns3.digitalocean.com."
+  type = "NS"
+}
