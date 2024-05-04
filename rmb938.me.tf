@@ -26,7 +26,7 @@ resource "cloudflare_record" "sora-ipmi" {
   type    = "A"
 }
 
-# Servers
+# Named Servers
 resource "cloudflare_record" "freenas" {
   zone_id = local.rmb938-me-zone-id
   name    = "freenas"
@@ -49,19 +49,19 @@ resource "cloudflare_record" "riku" {
 }
 
 # FreeNAS Jails
-resource "cloudflare_record" "hashi-vault" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "hashi-vault"
-  value   = "192.168.23.41"
-  type    = "A"
-}
-
-resource "cloudflare_record" "grafana" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "grafana"
-  value   = "192.168.23.42"
-  type    = "A"
-}
+# resource "cloudflare_record" "hashi-vault" {
+#   zone_id = local.rmb938-me-zone-id
+#   name    = "hashi-vault"
+#   value   = "192.168.23.41"
+#   type    = "A"
+# }
+# 
+# resource "cloudflare_record" "grafana" {
+#   zone_id = local.rmb938-me-zone-id
+#   name    = "grafana"
+#   value   = "192.168.23.42"
+#   type    = "A"
+# }
 
 resource "cloudflare_record" "plex" {
   zone_id = local.rmb938-me-zone-id
@@ -71,47 +71,47 @@ resource "cloudflare_record" "plex" {
 }
 
 # FreeNAS Openstack Jails
-resource "cloudflare_record" "openstack-mysql" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "openstack-mysql"
-  value   = "192.168.23.20"
-  type    = "A"
-}
-
-resource "cloudflare_record" "openstack-rabbitmq" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "openstack-rabbitmq"
-  value   = "192.168.23.21"
-  type    = "A"
-}
-
-resource "cloudflare_record" "openstack-keystone" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "openstack-keystone"
-  value   = "192.168.23.22"
-  type    = "A"
-}
-
-resource "cloudflare_record" "openstack-glance" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "openstack-glance"
-  value   = "192.168.23.23"
-  type    = "A"
-}
-
-resource "cloudflare_record" "openstack-cinder" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "openstack-cinder"
-  value   = "192.168.23.24"
-  type    = "A"
-}
-
-resource "cloudflare_record" "openstack-nova" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "openstack-nova"
-  value   = "192.168.23.25"
-  type    = "A"
-}
+# resource "cloudflare_record" "openstack-mysql" {
+#   zone_id = local.rmb938-me-zone-id
+#   name    = "openstack-mysql"
+#   value   = "192.168.23.20"
+#   type    = "A"
+# }
+# 
+# resource "cloudflare_record" "openstack-rabbitmq" {
+#   zone_id = local.rmb938-me-zone-id
+#   name    = "openstack-rabbitmq"
+#   value   = "192.168.23.21"
+#   type    = "A"
+# }
+# 
+# resource "cloudflare_record" "openstack-keystone" {
+#   zone_id = local.rmb938-me-zone-id
+#   name    = "openstack-keystone"
+#   value   = "192.168.23.22"
+#   type    = "A"
+# }
+# 
+# resource "cloudflare_record" "openstack-glance" {
+#   zone_id = local.rmb938-me-zone-id
+#   name    = "openstack-glance"
+#   value   = "192.168.23.23"
+#   type    = "A"
+# }
+# 
+# resource "cloudflare_record" "openstack-cinder" {
+#   zone_id = local.rmb938-me-zone-id
+#   name    = "openstack-cinder"
+#   value   = "192.168.23.24"
+#   type    = "A"
+# }
+# 
+# resource "cloudflare_record" "openstack-nova" {
+#   zone_id = local.rmb938-me-zone-id
+#   name    = "openstack-nova"
+#   value   = "192.168.23.25"
+#   type    = "A"
+# }
 
 # Raspberry PIs
 resource "cloudflare_record" "pi1" {
@@ -132,6 +132,22 @@ resource "cloudflare_record" "pi3" {
   zone_id = local.rmb938-me-zone-id
   name    = "pi3"
   value   = "192.168.23.72"
+  type    = "A"
+}
+
+# Proxmox Hosts
+resource "cloudflare_record" "pm1" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "pm1"
+  value   = "192.168.23.80"
+  type    = "A"
+}
+
+# Proxmox VMs
+resource "cloudflare_record" "x-pm" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "x.pm"
+  value   = "192.168.23.90"
   type    = "A"
 }
 
