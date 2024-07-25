@@ -70,6 +70,13 @@ resource "cloudflare_record" "plex" {
   type    = "A"
 }
 
+resource "cloudflare_record" "borg" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "borg"
+  value   = "192.168.23.44"
+  type    = "A"
+}
+
 # FreeNAS Openstack Jails
 # resource "cloudflare_record" "openstack-mysql" {
 #   zone_id = local.rmb938-me-zone-id
