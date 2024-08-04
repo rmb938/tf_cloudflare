@@ -49,20 +49,6 @@ resource "cloudflare_record" "riku" {
 }
 
 # FreeNAS Jails
-# resource "cloudflare_record" "hashi-vault" {
-#   zone_id = local.rmb938-me-zone-id
-#   name    = "hashi-vault"
-#   value   = "192.168.23.41"
-#   type    = "A"
-# }
-# 
-# resource "cloudflare_record" "grafana" {
-#   zone_id = local.rmb938-me-zone-id
-#   name    = "grafana"
-#   value   = "192.168.23.42"
-#   type    = "A"
-# }
-
 resource "cloudflare_record" "plex" {
   zone_id = local.rmb938-me-zone-id
   name    = "plex"
@@ -74,6 +60,21 @@ resource "cloudflare_record" "borg" {
   zone_id = local.rmb938-me-zone-id
   name    = "borg"
   value   = "192.168.23.44"
+  type    = "A"
+}
+
+# FreeNAS Hashi Jails
+resource "cloudflare_record" "hashi-vault" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "hashi-vault"
+  value   = "192.168.23.45"
+  type    = "A"
+}
+
+resource "cloudflare_record" "consul-server-1" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "consul-server-1"
+  value   = "192.168.23.46"
   type    = "A"
 }
 
