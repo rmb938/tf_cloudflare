@@ -52,7 +52,7 @@ resource "cloudflare_record" "riku" {
 resource "cloudflare_record" "plex" {
   zone_id = local.rmb938-me-zone-id
   name    = "plex"
-  value   = "192.168.23.43"
+  value   = "192.168.23.40"
   type    = "A"
 }
 
