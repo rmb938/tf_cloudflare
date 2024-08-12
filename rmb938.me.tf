@@ -48,7 +48,7 @@ resource "cloudflare_record" "riku" {
   type    = "A"
 }
 
-# FreeNAS Jails
+# FreeNAS Apps
 resource "cloudflare_record" "plex" {
   zone_id = local.rmb938-me-zone-id
   name    = "plex"
@@ -56,6 +56,7 @@ resource "cloudflare_record" "plex" {
   type    = "A"
 }
 
+# FreeNAS VMs
 resource "cloudflare_record" "borg" {
   zone_id = local.rmb938-me-zone-id
   name    = "borg"
@@ -75,6 +76,13 @@ resource "cloudflare_record" "consul-server-1" {
   zone_id = local.rmb938-me-zone-id
   name    = "consul-server-1"
   value   = "192.168.23.46"
+  type    = "A"
+}
+
+resource "cloudflare_record" "elasticsearch" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "elasticsearch"
+  value   = "192.168.23.47"
   type    = "A"
 }
 
