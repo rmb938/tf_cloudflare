@@ -64,7 +64,6 @@ resource "cloudflare_record" "borg" {
   type    = "A"
 }
 
-# FreeNAS Hashi Jails
 resource "cloudflare_record" "hashi-vault" {
   zone_id = local.rmb938-me-zone-id
   name    = "hashi-vault"
@@ -83,6 +82,13 @@ resource "cloudflare_record" "elasticsearch" {
   zone_id = local.rmb938-me-zone-id
   name    = "elasticsearch"
   value   = "192.168.23.47"
+  type    = "A"
+}
+
+resource "cloudflare_record" "prometheus" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "prometheus"
+  value   = "192.168.23.48"
   type    = "A"
 }
 
