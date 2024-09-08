@@ -27,13 +27,6 @@ resource "cloudflare_record" "sora-ipmi" {
 }
 
 # Named Servers
-resource "cloudflare_record" "freenas" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "freenas"
-  value   = "192.168.23.40"
-  type    = "A"
-}
-
 resource "cloudflare_record" "sora" {
   zone_id = local.rmb938-me-zone-id
   name    = "sora"
@@ -48,6 +41,22 @@ resource "cloudflare_record" "riku" {
   type    = "A"
 }
 
+# FreeNAS Proxmox
+resource "cloudflare_record" "freenas-pm" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "freenas-pm"
+  value   = "192.168.23.39"
+  type    = "A"
+}
+
+# FreeNAS
+resource "cloudflare_record" "freenas" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "freenas"
+  value   = "192.168.23.40"
+  type    = "A"
+}
+
 # FreeNAS Apps
 resource "cloudflare_record" "plex" {
   zone_id = local.rmb938-me-zone-id
@@ -56,7 +65,7 @@ resource "cloudflare_record" "plex" {
   type    = "A"
 }
 
-# FreeNAS VMs
+# FreeNAS Proxmox VMs
 resource "cloudflare_record" "borg" {
   zone_id = local.rmb938-me-zone-id
   name    = "borg"
@@ -91,6 +100,8 @@ resource "cloudflare_record" "prometheus" {
   value   = "192.168.23.48"
   type    = "A"
 }
+
+# FreeNAS Proxmox Containers
 
 # FreeNAS Openstack Jails
 # resource "cloudflare_record" "openstack-mysql" {
@@ -157,22 +168,6 @@ resource "cloudflare_record" "pi3" {
   type    = "A"
 }
 
-# Proxmox Hosts
-resource "cloudflare_record" "pm1" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "pm1"
-  value   = "192.168.23.80"
-  type    = "A"
-}
-
-# Proxmox VMs
-resource "cloudflare_record" "x-pm" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "x.pm"
-  value   = "192.168.23.90"
-  type    = "A"
-}
-
 # Mailgun
 resource "cloudflare_record" "email-mail" {
   zone_id = local.rmb938-me-zone-id
@@ -223,20 +218,20 @@ resource "cloudflare_record" "google-site-verification" {
 resource "cloudflare_record" "do-ns1" {
   zone_id  = local.rmb938-me-zone-id
   name = "do"
-  value = "ns1.digitalocean.com."
+  value = "ns1.digitalocean.com"
   type = "NS"
 }
 
 resource "cloudflare_record" "do-ns2" {
   zone_id  = local.rmb938-me-zone-id
   name = "do"
-  value = "ns2.digitalocean.com."
+  value = "ns2.digitalocean.com"
   type = "NS"
 }
 
 resource "cloudflare_record" "do-ns3" {
   zone_id  = local.rmb938-me-zone-id
   name = "do"
-  value = "ns3.digitalocean.com."
+  value = "ns3.digitalocean.com"
   type = "NS"
 }
