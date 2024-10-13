@@ -73,35 +73,62 @@ resource "cloudflare_record" "borg" {
   type    = "A"
 }
 
-resource "cloudflare_record" "hashi-vault" {
+# FreeNAS Proxmox Containers
+resource "cloudflare_record" "elasticsearch" {
   zone_id = local.rmb938-me-zone-id
-  name    = "hashi-vault"
+  name    = "elasticsearch"
   value   = "192.168.23.45"
+  type    = "A"
+}
+
+resource "cloudflare_record" "hashi-vault-1" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "hashi-vault-1"
+  value   = "192.168.23.46"
+  type    = "A"
+}
+
+resource "cloudflare_record" "hashi-vault-2" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "hashi-vault-2"
+  value   = "192.168.23.47"
+  type    = "A"
+}
+
+resource "cloudflare_record" "hashi-vault-3" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "hashi-vault-3"
+  value   = "192.168.23.48"
   type    = "A"
 }
 
 resource "cloudflare_record" "consul-server-1" {
   zone_id = local.rmb938-me-zone-id
   name    = "consul-server-1"
-  value   = "192.168.23.46"
+  value   = "192.168.23.49"
   type    = "A"
 }
 
-resource "cloudflare_record" "elasticsearch" {
+resource "cloudflare_record" "consul-server-2" {
   zone_id = local.rmb938-me-zone-id
-  name    = "elasticsearch"
-  value   = "192.168.23.47"
+  name    = "consul-server-2"
+  value   = "192.168.23.50"
+  type    = "A"
+}
+
+resource "cloudflare_record" "consul-server-3" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "consul-server-3"
+  value   = "192.168.23.51"
   type    = "A"
 }
 
 resource "cloudflare_record" "prometheus" {
   zone_id = local.rmb938-me-zone-id
   name    = "prometheus"
-  value   = "192.168.23.48"
+  value   = "192.168.23.52"
   type    = "A"
 }
-
-# FreeNAS Proxmox Containers
 
 # FreeNAS Openstack Jails
 # resource "cloudflare_record" "openstack-mysql" {
