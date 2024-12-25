@@ -30,14 +30,14 @@ resource "cloudflare_record" "sora-ipmi" {
 resource "cloudflare_record" "sora" {
   zone_id = local.rmb938-me-zone-id
   name    = "sora"
-  value   = "192.168.23.50"
+  value   = "192.168.23.10"
   type    = "A"
 }
 
 resource "cloudflare_record" "riku" {
   zone_id = local.rmb938-me-zone-id
   name    = "riku"
-  value   = "192.168.23.51"
+  value   = "192.168.23.11"
   type    = "A"
 }
 
