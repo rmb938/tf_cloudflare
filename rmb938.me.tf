@@ -130,26 +130,26 @@ resource "cloudflare_record" "step-ca-ra" {
   type    = "A"
 }
 
-# resource "cloudflare_record" "hashi-vault-1" {
-#   zone_id = local.rmb938-me-zone-id
-#   name    = "hashi-vault-1"
-#   value   = "192.168.23.52"
-#   type    = "A"
-# }
-#
-# resource "cloudflare_record" "hashi-vault-2" {
-#   zone_id = local.rmb938-me-zone-id
-#   name    = "hashi-vault-2"
-#   value   = "192.168.23.53"
-#   type    = "A"
-# }
-#
-# resource "cloudflare_record" "hashi-vault-3" {
-#   zone_id = local.rmb938-me-zone-id
-#   name    = "hashi-vault-3"
-#   value   = "192.168.23.54"
-#   type    = "A"
-# }
+resource "cloudflare_record" "hashi-vault-1" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "hashi-vault-1"
+  value   = "192.168.23.52"
+  type    = "A"
+}
+
+resource "cloudflare_record" "hashi-vault-2" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "hashi-vault-2"
+  value   = "192.168.23.53"
+  type    = "A"
+}
+
+resource "cloudflare_record" "hashi-vault-3" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "hashi-vault-3"
+  value   = "192.168.23.54"
+  type    = "A"
+}
 
 resource "cloudflare_record" "consul-server-1" {
   zone_id = local.rmb938-me-zone-id
