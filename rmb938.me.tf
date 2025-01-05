@@ -10,7 +10,6 @@ resource "cloudflare_record" "pfsense" {
   type    = "A"
 }
 
-
 # IPMI
 resource "cloudflare_record" "freenas-ipmi" {
   zone_id = local.rmb938-me-zone-id
@@ -65,139 +64,11 @@ resource "cloudflare_record" "plex" {
   type    = "A"
 }
 
-# FreeNAS Proxmox VMs
+# FreeNAS VMs
 resource "cloudflare_record" "borg" {
   zone_id = local.rmb938-me-zone-id
   name    = "borg"
   value   = "192.168.23.44"
-  type    = "A"
-}
-
-# FreeNAS Proxmox Containers
-resource "cloudflare_record" "elasticsearch" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "elasticsearch"
-  value   = "192.168.23.45"
-  type    = "A"
-}
-
-resource "cloudflare_record" "wildcard-haproxy" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "*.haproxy"
-  value   = "haproxy-t1.rmb938.me"
-  type    = "CNAME"
-}
-
-resource "cloudflare_record" "haproxy-t1" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "haproxy-t1"
-  value   = "192.168.23.46"
-  type    = "A"
-}
-
-resource "cloudflare_record" "haproxy-t1-1" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "haproxy-t1-1"
-  value   = "192.168.23.47"
-  type    = "A"
-}
-
-resource "cloudflare_record" "haproxy-t1-2" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "haproxy-t1-2"
-  value   = "192.168.23.48"
-  type    = "A"
-}
-
-resource "cloudflare_record" "haproxy-t2-1" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "haproxy-t2-1"
-  value   = "192.168.23.49"
-  type    = "A"
-}
-
-resource "cloudflare_record" "haproxy-t2-2" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "haproxy-t2-2"
-  value   = "192.168.23.50"
-  type    = "A"
-}
-
-resource "cloudflare_record" "step-ca-ra" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "step-ca-ra"
-  value   = "192.168.23.51"
-  type    = "A"
-}
-
-resource "cloudflare_record" "hashi-vault-1" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "hashi-vault-1"
-  value   = "192.168.23.52"
-  type    = "A"
-}
-
-resource "cloudflare_record" "hashi-vault-2" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "hashi-vault-2"
-  value   = "192.168.23.53"
-  type    = "A"
-}
-
-resource "cloudflare_record" "hashi-vault-3" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "hashi-vault-3"
-  value   = "192.168.23.54"
-  type    = "A"
-}
-
-resource "cloudflare_record" "consul-server-1" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "consul-server-1"
-  value   = "192.168.23.55"
-  type    = "A"
-}
-
-resource "cloudflare_record" "consul-server-2" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "consul-server-2"
-  value   = "192.168.23.56"
-  type    = "A"
-}
-
-resource "cloudflare_record" "consul-server-3" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "consul-server-3"
-  value   = "192.168.23.57"
-  type    = "A"
-}
-
-resource "cloudflare_record" "prometheus" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "prometheus"
-  value   = "192.168.23.58"
-  type    = "A"
-}
-
-# Raspberry PIs
-resource "cloudflare_record" "pi1" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "pi1"
-  value   = "192.168.23.70"
-  type    = "A"
-}
-
-resource "cloudflare_record" "pi2" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "pi2"
-  value   = "192.168.23.71"
-  type    = "A"
-}
-
-resource "cloudflare_record" "pi3" {
-  zone_id = local.rmb938-me-zone-id
-  name    = "pi3"
-  value   = "192.168.23.72"
   type    = "A"
 }
 
@@ -249,22 +120,22 @@ resource "cloudflare_record" "google-site-verification" {
 
 # Digital Ocean
 resource "cloudflare_record" "do-ns1" {
-  zone_id  = local.rmb938-me-zone-id
-  name = "do"
-  value = "ns1.digitalocean.com"
-  type = "NS"
+  zone_id = local.rmb938-me-zone-id
+  name    = "do"
+  value   = "ns1.digitalocean.com"
+  type    = "NS"
 }
 
 resource "cloudflare_record" "do-ns2" {
-  zone_id  = local.rmb938-me-zone-id
-  name = "do"
-  value = "ns2.digitalocean.com"
-  type = "NS"
+  zone_id = local.rmb938-me-zone-id
+  name    = "do"
+  value   = "ns2.digitalocean.com"
+  type    = "NS"
 }
 
 resource "cloudflare_record" "do-ns3" {
-  zone_id  = local.rmb938-me-zone-id
-  name = "do"
-  value = "ns3.digitalocean.com"
-  type = "NS"
+  zone_id = local.rmb938-me-zone-id
+  name    = "do"
+  value   = "ns3.digitalocean.com"
+  type    = "NS"
 }
