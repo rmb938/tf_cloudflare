@@ -50,7 +50,7 @@ resource "cloudflare_record" "haproxy-t2-2" {
 
 resource "cloudflare_record" "step-ca-ra" {
   zone_id = local.rmb938-me-zone-id
-  name    = "step-ca-ra.us-homelab1.hl"
+  name    = "step-ca.us-homelab1.hl"
   value   = "192.168.23.51"
   type    = "A"
 }
