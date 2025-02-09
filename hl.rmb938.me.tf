@@ -9,7 +9,7 @@ resource "cloudflare_record" "elasticsearch" {
 resource "cloudflare_record" "wildcard-haproxy" {
   zone_id = local.rmb938-me-zone-id
   name    = "*.haproxy.us-homelab1.hl"
-  value   = "haproxy-t1.rmb938.me"
+  value   = "haproxy-t1.us-homelab1.hl.rmb938.me"
   type    = "CNAME"
 }
 
