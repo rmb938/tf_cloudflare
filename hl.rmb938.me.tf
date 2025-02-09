@@ -76,23 +76,23 @@ resource "cloudflare_record" "hashi-vault-3" {
   type    = "A"
 }
 
-resource "cloudflare_record" "consul-server-1" {
+resource "cloudflare_record" "hashi-consul-1" {
   zone_id = local.rmb938-me-zone-id
-  name    = "consul-server-1.us-homelab1.hl"
+  name    = "hashi-consul-1.us-homelab1.hl"
   value   = "192.168.23.55"
   type    = "A"
 }
 
-resource "cloudflare_record" "consul-server-2" {
+resource "cloudflare_record" "hashi-consul-2" {
   zone_id = local.rmb938-me-zone-id
-  name    = "consul-server-2.us-homelab1.hl"
+  name    = "hashi-consul-2.us-homelab1.hl"
   value   = "192.168.23.56"
   type    = "A"
 }
 
-resource "cloudflare_record" "consul-server-3" {
+resource "cloudflare_record" "hashi-consul-3" {
   zone_id = local.rmb938-me-zone-id
-  name    = "consul-server-3.us-homelab1.hl"
+  name    = "hashi-consul-3.us-homelab1.hl"
   value   = "192.168.23.57"
   type    = "A"
 }
