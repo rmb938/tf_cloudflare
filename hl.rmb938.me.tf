@@ -113,14 +113,14 @@ resource "cloudflare_record" "openstack-postgres-1" {
 
 resource "cloudflare_record" "openstack-postgres-2" {
   zone_id = local.rmb938-me-zone-id
-  name    = "openstack-postgres-1.us-homelab1.hl"
+  name    = "openstack-postgres-2.us-homelab1.hl"
   value   = "192.168.23.71"
   type    = "A"
 }
 
 resource "cloudflare_record" "openstack-postgres-3" {
   zone_id = local.rmb938-me-zone-id
-  name    = "openstack-postgres-1.us-homelab1.hl"
+  name    = "openstack-postgres-3.us-homelab1.hl"
   value   = "192.168.23.72"
   type    = "A"
 }
