@@ -124,3 +124,24 @@ resource "cloudflare_record" "openstack-postgres-3" {
   value   = "192.168.23.72"
   type    = "A"
 }
+
+resource "cloudflare_record" "openstack-rabbitmq-1" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "openstack-rabbitmq-1.us-homelab1.hl"
+  value   = "192.168.23.73"
+  type    = "A"
+}
+
+resource "cloudflare_record" "openstack-rabbitmq-2" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "openstack-rabbitmq-2.us-homelab1.hl"
+  value   = "192.168.23.74"
+  type    = "A"
+}
+
+resource "cloudflare_record" "openstack-rabbitmq-3" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "openstack-rabbitmq-3.us-homelab1.hl"
+  value   = "192.168.23.75"
+  type    = "A"
+}
