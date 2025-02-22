@@ -145,3 +145,24 @@ resource "cloudflare_record" "openstack-rabbitmq-3" {
   value   = "192.168.23.75"
   type    = "A"
 }
+
+resource "cloudflare_record" "openstack-keystone-1" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "openstack-keystone-1.us-homelab1.hl"
+  value   = "192.168.23.76"
+  type    = "A"
+}
+
+resource "cloudflare_record" "openstack-keystone-2" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "openstack-keystone-2.us-homelab1.hl"
+  value   = "192.168.23.77"
+  type    = "A"
+}
+
+resource "cloudflare_record" "openstack-keystone-3" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "openstack-keystone-3.us-homelab1.hl"
+  value   = "192.168.23.78"
+  type    = "A"
+}
