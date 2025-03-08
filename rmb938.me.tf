@@ -40,6 +40,20 @@ resource "cloudflare_record" "riku" {
   type    = "A"
 }
 
+resource "cloudflare_record" "roxas" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "roxas"
+  value   = "192.168.23.12"
+  type    = "A"
+}
+
+resource "cloudflare_record" "roxas-ipmi" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "roxas"
+  value   = "192.168.20.12"
+  type    = "A"
+}
+
 # FreeNAS Proxmox
 resource "cloudflare_record" "freenas-pm" {
   zone_id = local.rmb938-me-zone-id
