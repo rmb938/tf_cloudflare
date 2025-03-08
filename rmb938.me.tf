@@ -49,7 +49,7 @@ resource "cloudflare_record" "roxas" {
 
 resource "cloudflare_record" "roxas-ipmi" {
   zone_id = local.rmb938-me-zone-id
-  name    = "roxas"
+  name    = "roxas-ipmi"
   value   = "192.168.20.12"
   type    = "A"
 }
