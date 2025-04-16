@@ -281,7 +281,7 @@ resource "cloudflare_record" "openstack-octavia-1" {
 
 resource "cloudflare_record" "openstack-octavia-2" {
   zone_id = local.rmb938-me-zone-id
-  name    = "openstack-neuoctaviatron-2.us-homelab1.hl"
+  name    = "openstack-octavia-2.us-homelab1.hl"
   value   = "192.168.23.95"
   type    = "A"
 }
@@ -290,5 +290,26 @@ resource "cloudflare_record" "openstack-octavia-3" {
   zone_id = local.rmb938-me-zone-id
   name    = "openstack-octavia-3.us-homelab1.hl"
   value   = "192.168.23.96"
+  type    = "A"
+}
+
+resource "cloudflare_record" "openstack-ovn-northd-1" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "openstack-ovn-northd-1.us-homelab1.hl"
+  value   = "192.168.23.97"
+  type    = "A"
+}
+
+resource "cloudflare_record" "openstack-ovn-northd-2" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "openstack-ovn-northd-2.us-homelab1.hl"
+  value   = "192.168.23.98"
+  type    = "A"
+}
+
+resource "cloudflare_record" "openstack-ovn-northd-3" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "openstack-ovn-northd-3.us-homelab1.hl"
+  value   = "192.168.23.99"
   type    = "A"
 }
