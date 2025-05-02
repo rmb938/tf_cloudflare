@@ -313,3 +313,10 @@ resource "cloudflare_record" "openstack-ovn-northd-3" {
   value   = "192.168.23.99"
   type    = "A"
 }
+
+resource "cloudflare_record" openstack-compute-1" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "openstack-compute-1.us-homelab1.hl"
+  value   = "192.168.23.100"
+  type    = "A"
+}
