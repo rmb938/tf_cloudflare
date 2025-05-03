@@ -320,3 +320,10 @@ resource "cloudflare_record" "openstack-compute-1" {
   value   = "192.168.23.100"
   type    = "A"
 }
+
+resource "cloudflare_record" "devstack" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "devstack.us-homelab1.hl"
+  value   = "192.168.23.101"
+  type    = "A"
+}
