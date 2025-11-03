@@ -327,3 +327,10 @@ resource "cloudflare_record" "devstack" {
   value   = "192.168.23.101"
   type    = "A"
 }
+
+resource "cloudflare_record" "minio-1" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "minio-1.us-homelab1.hl"
+  value   = "192.168.23.102"
+  type    = "A"
+}
