@@ -334,3 +334,10 @@ resource "cloudflare_record" "minio-1" {
   value   = "192.168.23.102"
   type    = "A"
 }
+
+resource "cloudflare_record" "clickhouse-1" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "clickhouse-1.us-homelab1.hl"
+  value   = "192.168.23.103"
+  type    = "A"
+}
