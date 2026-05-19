@@ -341,3 +341,10 @@ resource "cloudflare_record" "clickhouse-1" {
   value   = "192.168.23.103"
   type    = "A"
 }
+
+resource "cloudflare_record" "minecraft" {
+  zone_id = local.rmb938-me-zone-id
+  name    = "minecraft.us-homelab1.hl"
+  value   = "192.168.23.104"
+  type    = "A"
+}
